@@ -2,7 +2,7 @@ var currentInput = '';
 var operator = '';
 var result = null;
 
-function appendToDisplay(value) {
+function addToDisplay(value) {
   currentInput += value;
   document.getElementById('display').value = currentInput;
 }
@@ -47,7 +47,7 @@ function clearDisplay() {
   document.getElementById('display').value = '';
 }
 
-function appendDecimal() {
+function addDecimal() {
   if (!currentInput.includes('.')) {
     currentInput += '.';
     document.getElementById('display').value = currentInput;
