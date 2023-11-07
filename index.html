@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
   <div id="calculator">
     <input type="text" id="display" disabled>
     <table>
@@ -14,6 +15,7 @@
         <td><button onclick="setOperator('+')">+</button></td>
         <td><button onclick="setOperator('-')">-</button></td>
       </tr>
+      
       <tr>
         <td><button onclick="appendToDisplay('4')">4</button></td>
         <td><button onclick="appendToDisplay('5')">5</button></td>
@@ -21,6 +23,7 @@
         <td><button onclick="setOperator('*')">*</button></td>
         <td><button onclick="setOperator('/')">/</button></td>
       </tr>
+      
       <tr>
         <td><button onclick="appendToDisplay('1')">1</button></td>
         <td><button onclick="appendToDisplay('2')">2</button></td>
@@ -28,7 +31,8 @@
         <td><button onclick="calculate()">=</button></td>
         <td><button onclick="appendDecimal()">.</button></td>
       </tr>
-      <tr>
+      
+      <tr id="clear">
         <td><button onclick="clearDisplay()">C</button></td>
       </tr>
     </table>
