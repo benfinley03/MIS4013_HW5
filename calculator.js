@@ -1,6 +1,6 @@
-let currentInput = '';
-let operator = '';
-let result = null;
+var currentInput = '';
+var operator = '';
+var result = null;
 
 function appendToDisplay(value) {
   currentInput += value;
