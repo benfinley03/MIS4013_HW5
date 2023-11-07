@@ -54,25 +54,6 @@ function appendDecimal() {
   }
 }
 
-function appendSqrt() {
-  if (currentInput !== '') {
-    currentInput = Math.sqrt(parseFloat(currentInput)).toString();
-    document.getElementById('display').value = currentInput;
-  }
-}
-
-function appendPercentage() {
-  if (currentInput !== '') {
-    currentInput = (parseFloat(currentInput) / 100).toString();
-    document.getElementById('display').value = currentInput;
-  }
-}
-
-function changeSign() {
-  if (currentInput !== '') {
-    currentInput = (-parseFloat(currentInput)).toString();
-    document.getElementById('display').value = currentInput;
-  }
 }
 
 
