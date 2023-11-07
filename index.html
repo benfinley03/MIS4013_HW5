@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" id="display" disabled>
+    <table>
+      <tr>
+        <td><button onclick="appendToDisplay('7')">7</button></td>
+        <td><button onclick="appendToDisplay('8')">8</button></td>
+        <td><button onclick="appendToDisplay('9')">9</button></td>
+        <td><button onclick="setOperator('+')">+</button></td>
+        <td><button onclick="setOperator('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendToDisplay('4')">4</button></td>
+        <td><button onclick="appendToDisplay('5')">5</button></td>
+        <td><button onclick="appendToDisplay('6')">6</button></td>
+        <td><button onclick="setOperator('*')">*</button></td>
+        <td><button onclick="setOperator('/')">/</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendToDisplay('1')">1</button></td>
+        <td><button onclick="appendToDisplay('2')">2</button></td>
+        <td><button onclick="appendToDisplay('3')">3</button></td>
+        <td><button onclick="calculate()">=</button></td>
+        <td><button onclick="appendDecimal()">.</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="appendSqrt()">√</button></td>
+        <td><button onclick="appendPercentage()">%</button></td>
+        <td><button onclick="changeSign()">+/-</button></td>
+        <td><button onclick="clearDisplay()">C</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
+
+let currentInput = '';
+let operator = '';
+let result = null;
+
+function appendToDisplay(value) {
+  currentInput += value;
+  document.getElementById('display').value = currentInput;
+}
+
+function setOperator(op) {
+  if (currentInput !== '') {
+    operator = op;
+    result = parseFloat(currentInput);
+    currentInput = '';
+    document.getElementById('display').value = '';
+  }
+}
+
+function calculate() {
+  if (currentInput !== '' && operator !== '') {
+    if (operator === '+') {
+      result += parseFloat(currentInput);
+    } else if (operator === '-') {
+      result -= parseFloat(currentInput);
+    } else if (operator === '*') {
+      result *= parseFloat(currentInput);
+    } else if (operator === '/') {
+      if (parseFloat(currentInput) !== 0) {
+        result /= parseFloat(currentInput);
+      } else {
+        alert("Cannot divide by zero");
+        clearDisplay();
+        return;
+      }
+    }
+
+    document.getElementById('display').value = result;
+    currentInput = '';
+    operator = '';
+  }
+}
+
+function clearDisplay() {
+  currentInput = '';
+  operator = '';
+  result = null;
+  document.getElementById('display').value = '';
+}
+
+function appendDecimal() {
+  if (!currentInput.includes('.')) {
+    currentInput += '.';
+    document.getElementById('display').value = currentInput;
+  }
+}
+
+function appendSqrt() {
+  if (currentInput !== '') {
+    currentInput = Math.sqrt(parseFloat(currentInput)).toString();
+    document.getElementById('display').value = currentInput;
+  }
+}
+
+function appendPercentage() {
+  if (currentInput !== '') {
+    currentInput = (parseFloat(currentInput) / 100).toString();
+    document.getElementById('display').value = currentInput;
+  }
+}
+
+function changeSign() {
+  if (currentInput !== '') {
+    currentInput = (-parseFloat(currentInput)).toString();
+    document.getElementById('display').value = currentInput;
+  }
+}
 
