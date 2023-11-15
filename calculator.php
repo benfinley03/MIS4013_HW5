@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Home";
+$pageTitle = "Calculator";
 include "view-header.php";
 ?>
 <h1>Calculator</h1>
