@@ -9,15 +9,13 @@ include "view-header.php";
 
     <h1 x-text="greeting"></h1>
 
-    <button @click="updateGreeting()">Update Greeting</button>
+    <button x-on:click="updateGreeting">Update Greeting</button>
 
     <script>
         function updateGreeting() {
-            // Access Alpine.js data using `Alpine.data('your-element-id')`
-            var app = Alpine.data('body');
-
-            // Update the greeting based on the entered name
-            app.greeting = 'Hello, ' + app.name + '!';
+            Alpine.store('name', function (name) {
+                Alpine.store('greeting', 'Hello, ' + name + '!');
+            });
         }
     </script>
 <?php
