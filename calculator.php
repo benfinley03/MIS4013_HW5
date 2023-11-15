@@ -1,51 +1,17 @@
 <?php
-$pageTitle = "Calculator";
+$pageTitle = "Calculator.js";
 include "view-header.php";
 ?>
-<h1>Calculator</h1>
+<h1>Calculator.js</h1>
+<div id="calculator"></div>
 
-<div id="calculator">
-    <input type="text" id="display" disabled>
-    <table>
-      <tr>
-        <td><button onclick="addToDisplay('7')">7</button></td>
-        <td><button onclick="addToDisplay('8')">8</button></td>
-        <td><button onclick="addToDisplay('9')">9</button></td>
-        <td><button onclick="setOperator('+')">+</button></td>
-        <td><button onclick="setOperator('-')">-</button></td>
-      </tr>
-      
-      <tr>
-        <td><button onclick="addToDisplay('4')">4</button></td>
-        <td><button onclick="addToDisplay('5')">5</button></td>
-        <td><button onclick="addToDisplay('6')">6</button></td>
-        <td><button onclick="setOperator('*')">*</button></td>
-        <td><button onclick="setOperator('/')">/</button></td>
-      </tr>
-      
-      <tr>
-        <td><button onclick="addToDisplay('1')">1</button></td>
-        <td><button onclick="addToDisplay('2')">2</button></td>
-        <td><button onclick="addToDisplay('3')">3</button></td>
-        <td><button onclick="calculate()">=</button></td>
-        <td><button onclick="addDecimal()">.</button></td>
-      </tr>
-      
-    </table>
-
-    <table>
-      <tr>
-        <td><button onclick="addToDisplay('0')">0</button></td>
-        <td><button onclick="clearDisplay()" style="width: 300px;">Clear</button></td>
-      </tr>
-    </table>
-</div>
-
-  <script src="calculator.js"></script>
-
-</div>
-  </body>
-
+    <script>
+        // Initialize Calculator.js
+        const calculator = new Calculator({
+            container: '#calculator',
+            theme: 'light' // You can change the theme to 'dark' if you prefer
+        });
+    </script>
 
 <?php
 include "view-footer.php";
