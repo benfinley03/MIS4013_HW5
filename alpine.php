@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Home";
+$pageTitle = "Alpine.js";
 include "view-header.php";
 ?>
 
