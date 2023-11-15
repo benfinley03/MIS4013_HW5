@@ -16,17 +16,17 @@ include "view-header.php";
         }
 
         // Generate a random array of positive numbers
-        const numbers = generateRandomNumbers(10); // Change 10 to the desired count
+        const numbers = generateRandomNumbers(5); // Change 10 to the desired count
 
         // Use Lodash functions to manipulate the array
-        const squaredNumbers = _.map(numbers, n => n * n);
+        const cubedNumbers = _.map(numbers, n => n * n * n);
         const evenNumbers = _.filter(numbers, n => n % 2 == 0);
 
         // Display the results on the page
         document.getElementById('output').innerHTML = `
             <p>Original Numbers: ${numbers.join(', ')}</p>
-            <p>Squared Numbers: ${squaredNumbers.join(', ')}</p>
-            <p>Even Numbers: ${evenNumbers.join(', ')}</p>
+            <p>Cubed Numbers: ${squaredNumbers.join(', ')}</p>
+            <p>Even Numbers from Original Numbers: ${evenNumbers.join(', ')}</p>
         `;
     </script>
 
