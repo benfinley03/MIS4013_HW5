@@ -1,3 +1,10 @@
+<?php
+$pageTitle = "Anime.js";
+include "view-header.php";
+?>
+<h1>Anime.js</h1>
+
+
 <div id="animated-square" style="width: 100px; height: 100px; background-color: #3498db;"></div>
 
     <script>
@@ -12,3 +19,8 @@
             loop: true // Repeat the animation
         });
     </script>
+
+
+<?php
+include "view-footer.php";
+?>
