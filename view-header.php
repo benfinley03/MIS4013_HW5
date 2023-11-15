@@ -26,7 +26,7 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home - HW6</a>
         <a class="nav-link" href="calculator.php">Calculator</a>
-        <a class="nav-link" href="weather.php">Alpine.js</a>
+        <a class="nav-link" href="alpine.php">Alpine.js</a>
 
       </div>
     </div>
