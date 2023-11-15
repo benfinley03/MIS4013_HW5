@@ -2,24 +2,23 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-<body x-data="{ messages: <?php echo json_encode(['Hello', 'Bonjour', 'Hola', 'Ciao']); ?>, currentIndex: 0 }">
+<body x-data="{ name: '', greeting: 'Hello, Alpine.js!' }">
 
-    <h1 x-text="messages[currentIndex]"></h1>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" x-model="name">
 
-    <button @click="changeMessage">Change Message</button>
+    <h1 x-text="greeting"></h1>
+
+    <button @click="updateGreeting()">Update Greeting</button>
 
     <script>
-        // Alpine.js data initialization
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('messages', () => ({
-                currentIndex: 0,
-                messages: <?php echo json_encode(['Hello', 'Bonjour', 'Hola', 'Ciao']); ?>,
-                changeMessage() {
-                    this.currentIndex = (this.currentIndex + 1) % this.messages.length;
-                },
-            }));
-        });
+        function updateGreeting() {
+            // Access Alpine.js data using `Alpine.data('your-element-id')`
+            var app = Alpine.data('body');
+
+            // Update the greeting based on the entered name
+            app.greeting = 'Hello, ' + app.name + '!';
+        }
     </script>
 <?php
 include "view-footer.php";
