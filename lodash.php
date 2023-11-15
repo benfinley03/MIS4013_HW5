@@ -20,7 +20,7 @@ include "view-header.php";
 
         // Use Lodash functions to manipulate the array
         const squaredNumbers = _.map(numbers, n => n * n);
-        const evenNumbers = _.filter(numbers, n => n % 2 === 0);
+        const evenNumbers = _.filter(numbers, n => n % 2 == 0);
 
         // Display the results on the page
         document.getElementById('output').innerHTML = `
