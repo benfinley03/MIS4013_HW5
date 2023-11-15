@@ -8,17 +8,16 @@ include "view-header.php";
 <div id="animated-square" style="width: 100px; height: 100px; background-color: #3498db;"></div>
 
     <script>
-        // Use Anime.js to create animations
         anime({
             targets: '#animated-square',
-            translateX: 500, // Move 250px to the right
-            translateY: 200, // Move 100px down
-            rotate: '10turn', // Rotate one full turn (360 degrees)
-            scale: 4, // Scale the element by a factor of 2
-            backgroundColor: '#e74c3c', // Change background color
-            duration: 3000, // Animation duration in milliseconds
-            easing: 'easeInOutQuad', // Easing function
-            delay: 400, // Delay before starting the animation (in milliseconds)
+            translateX: 500, 
+            translateY: 200,
+            rotate: '10turn',
+            scale: 4, 
+            backgroundColor: '#e74c3c',
+            duration: 3000, 
+            easing: 'easeInOutQuad',
+            delay: 400,
             loop: true
         });
     </script>
