@@ -5,28 +5,32 @@ include "view-header.php";
 
 <h1>Simple Page with Lodash</h1>
 
-    <button onclick="generateRandomNumbers()">Regenerate Numbers</button>
+    <button onclick="generateRandomNumbers(5)">Generate Numbers</button>
     <div id="output"></div>
 
+    
+
     <script>
-        // Function to generate a random array of positive numbers
         function generateRandomNumbers(count) {
             return Array.from({ length: count }, () => Math.floor(Math.random() * 100) + 1);
+            displayNumbers();
         }
 
-        // Generate a random array of positive numbers
+        function getNumbers() {
         const numbers = generateRandomNumbers(5); // Change 10 to the desired count
-
-        // Use Lodash functions to manipulate the array
         const cubedNumbers = _.map(numbers, n => n * n * n);
         const evenNumbers = _.filter(numbers, n => n % 2 == 0);
 
-        // Display the results on the page
+        }
+
+        function displayNumbers() {
+        getNumbers();
         document.getElementById('output').innerHTML = `
             <p>Original Numbers: ${numbers.join(', ')}</p>
             <p>Cubed Numbers: ${cubedNumbers.join(', ')}</p>
             <p>Even Numbers from Original Numbers: ${evenNumbers.join(', ')}</p>
         `;
+        }
     </script>
 
 <?php
