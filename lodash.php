@@ -5,6 +5,7 @@ include "view-header.php";
 
 <h1>Simple Page with Lodash</h1>
 
+    <button onclick="generateRandomNumbers()">Regenerate Numbers</button>
     <div id="output"></div>
 
     <script>
