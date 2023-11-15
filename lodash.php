@@ -5,11 +5,18 @@ include "view-header.php";
 
 <h1>Simple Page with Lodash</h1>
 
+    <h1>Simple Page with Lodash</h1>
+
     <div id="output"></div>
 
     <script>
-        // Sample array of numbers
-        const numbers = [1, 2, 3, 4, 5];
+        // Function to generate a random array of positive numbers
+        function generateRandomNumbers(count) {
+            return Array.from({ length: count }, () => Math.floor(Math.random() * 100) + 1);
+        }
+
+        // Generate a random array of positive numbers
+        const numbers = generateRandomNumbers(10); // Change 10 to the desired count
 
         // Use Lodash functions to manipulate the array
         const squaredNumbers = _.map(numbers, n => n * n);
