@@ -25,7 +25,7 @@ include "view-header.php";
         // Display the results on the page
         document.getElementById('output').innerHTML = `
             <p>Original Numbers: ${numbers.join(', ')}</p>
-            <p>Cubed Numbers: ${squaredNumbers.join(', ')}</p>
+            <p>Cubed Numbers: ${cubedNumbers.join(', ')}</p>
             <p>Even Numbers from Original Numbers: ${evenNumbers.join(', ')}</p>
         `;
     </script>
