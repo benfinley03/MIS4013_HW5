@@ -10,15 +10,7 @@ include "view-header.php";
 
     <h1 x-text="greeting"></h1>
 
-    <button x-on:click="updateGreeting()">Update Greeting</button>
-
-    <script>
-        function updateGreeting() {
-            Alpine.store('name', function (name) {
-                Alpine.store('greeting', 'Hello, ' + name + '!');
-            });
-        }
-    </script>
+    <button @click="greeting = 'Hello, ' + name + '!'">Update Greeting</button>
 <?php
 include "view-footer.php";
 ?>
