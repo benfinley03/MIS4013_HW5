@@ -32,6 +32,7 @@
         <a class="nav-link" href="alpine.php">Alpine.js</a>
         <a class="nav-link" href="anime.php">Anime.js</a>
         <a class="nav-link" href="lodash.php">Lodash</a>
+        <a class="nav-link" href="paper.php">Paper.js</a>        
 
       </div>
     </div>
