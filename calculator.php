@@ -3,6 +3,7 @@ $pageTitle = "Calculator.js";
 include "view-header.php";
 ?>
 <h1>Calculator.js</h1>
+
 <div id="calculator"></div>
 
     <script>
