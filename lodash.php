@@ -5,8 +5,6 @@ include "view-header.php";
 
 <h1>Simple Page with Lodash</h1>
 
-    <h1>Simple Page with Lodash</h1>
-
     <div id="output"></div>
 
     <script>
