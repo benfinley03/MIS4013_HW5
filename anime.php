@@ -11,14 +11,14 @@ include "view-header.php";
         // Use Anime.js to create animations
         anime({
             targets: '#animated-square',
-            translateX: 250, // Move 250px to the right
-            translateY: 100, // Move 100px down
-            rotate: '1turn', // Rotate one full turn (360 degrees)
-            scale: 2, // Scale the element by a factor of 2
+            translateX: 500, // Move 250px to the right
+            translateY: 200, // Move 100px down
+            rotate: '10turn', // Rotate one full turn (360 degrees)
+            scale: 4, // Scale the element by a factor of 2
             backgroundColor: '#e74c3c', // Change background color
-            duration: 2000, // Animation duration in milliseconds
+            duration: 3000, // Animation duration in milliseconds
             easing: 'easeInOutQuad', // Easing function
-            delay: 500, // Delay before starting the animation (in milliseconds)
+            delay: 400, // Delay before starting the animation (in milliseconds)
             loop: true
         });
     </script>
