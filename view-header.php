@@ -27,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home - HW6</a>
-        <a class="nav-link" href="calculator.php">Calculator</a>
+        <a class="nav-link" href="calculator.php">Calculator.js</a>
         <a class="nav-link" href="alpine.php">Alpine.js</a>
         <a class="nav-link" href="anime.php">Anime.js</a>
 
