@@ -1,4 +1,9 @@
- <h1>Simple Page with Lodash</h1>
+<?php
+$pageTitle = "Home";
+include "view-header.php";
+?>
+
+<h1>Simple Page with Lodash</h1>
 
     <div id="output"></div>
 
@@ -17,3 +22,7 @@
             <p>Even Numbers: ${evenNumbers.join(', ')}</p>
         `;
     </script>
+
+<?php
+include "view-footer.php";
+?>
