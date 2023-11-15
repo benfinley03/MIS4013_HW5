@@ -5,15 +5,12 @@ include "view-header.php";
 <h1>jQuery</h1>
 
     <button id="toggleButton">Toggle Paragraph</button>
-    <p id="myParagraph" style="display: none;">This is a hidden paragraph. Click the button to toggle its visibility.</p>
+    <p id="myParagraph">This is like the second coolest thing aside from the animated square that's on in one of the other pages. You can click again to make this paragraph diasppear.</p>
 
     <script>
         $(document).ready(function() {
             $("#toggleButton").click(function() {
                 $("#myParagraph").slideToggle(500, function() {
-                    // Animation complete callback
-                    // const buttonText = $(this).is(":visible") ? "Hide Paragraph" : "Show Paragraph";
-                    // $("#toggleButton").text(buttonText);
                 });
             });
         });
